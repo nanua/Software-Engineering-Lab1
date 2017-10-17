@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.Group?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            prefHeight="Infinity" prefWidth="Infinity"
+            stylesheets="Home.css"
+            fx:controller="ShowImage" fx:id="imagePane">
+
+    <ScrollPane AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
+                AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0"
+                prefWidth="Infinity" prefHeight="Infinity"
+                fitToWidth="true" fitToHeight="true"
+                styleClass="edge-to-edge"
+                fx:id="imageScroller">
+
+            <StackPane fx:id="imageHolder">
+                <Group>
+                    <ImageView fx:id="imageView"/>
+                </Group>
+            </StackPane>
+
+    </ScrollPane>
+
+    <Label text="另存为"
+           AnchorPane.topAnchor="20"
+           AnchorPane.leftAnchor="30"
+           prefWidth="150"
+           styleClass="pressable"
+           onMouseClicked="#saveToFile"/>
+
+    <Label text="Previous"
+           AnchorPane.bottomAnchor="30"
+           AnchorPane.leftAnchor="30"
+           styleClass="ascii, pressable"
+           fx:id="previousLabel"
+           onMouseClicked="#showPreviousImage"/>
+
+    <Label text="Next"
+           AnchorPane.bottomAnchor="30"
+           AnchorPane.rightAnchor="30"
+           styleClass="ascii, pressable"
+           fx:id="nextLabel"
+           onMouseClicked="#showNextImage"/>
+
+    <Label text="Stop"
+           AnchorPane.bottomAnchor="30"
+           AnchorPane.leftAnchor="30"
+           styleClass="ascii, pressable"
+           fx:id="stopLabel"
+           onMouseClicked="#stopWalking"/>
+
+</AnchorPane>
