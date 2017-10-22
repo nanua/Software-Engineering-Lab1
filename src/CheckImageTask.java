@@ -1,5 +1,4 @@
 import javafx.application.Platform;
-import javafx.concurrent.Task;
 import javafx.scene.image.Image;
 import javafx.scene.text.Text;
 
@@ -9,7 +8,7 @@ public class CheckImageTask extends Thread {
         this.setDaemon(true);
     }
 
-    private String imgName;
+    private final String imgName;
 
     @Override
     public void run() {
@@ -25,7 +24,8 @@ public class CheckImageTask extends Thread {
                 return;
             }
             try {
-                sleep(500);
+                // 把等待间隔减小
+                sleep(100);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

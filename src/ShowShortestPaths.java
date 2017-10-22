@@ -3,26 +3,26 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
-import javafx.scene.text.Text;
-
 import java.net.URL;
 import java.util.HashMap;
 import java.util.List;
 import java.util.ResourceBundle;
+import javafx.scene.text.Text;
+
 
 public class ShowShortestPaths implements Initializable {
     public static ShowShortestPaths showShortestPathsController;
-    @FXML
+  @FXML
     public Pane showShortestPathsPane;
-    @FXML
+  @FXML
     public TextField srcTextField;
-    @FXML
+  @FXML
     public TextField desTextField;
 
-    @FXML
+  @FXML
     public TextArea shortestPathsResultTextField;
 
-    @Override
+  @Override
     public void initialize(URL location, ResourceBundle resources) {
         showShortestPathsController = this;
     }
@@ -39,11 +39,11 @@ public class ShowShortestPaths implements Initializable {
         ImageProperty.fileCnt = 1;
 
         String srcName = srcTextField.getText();
-        String desName = desTextField.getText();
         shortestPathsResultTextField.clear();
         ImageProperty.pre = false;
         ImageProperty.stop = false;
 
+        String desName = desTextField.getText();
         if (desName.equals("")) {
             HashMap<String, String> res = MainGui.graph.findShortestPaths(srcName);
             if (res == null || res.isEmpty()) {

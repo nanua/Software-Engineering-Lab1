@@ -1,5 +1,3 @@
-import org.junit.Test;
-
 import java.io.File;
 import java.io.PrintStream;
 import java.lang.reflect.Array;
@@ -10,7 +8,6 @@ import java.util.List;
 import java.util.function.Consumer;
 
 public class GraphTest {
-    @Test
     public void randomWalkIterator() throws Exception {
         String text = "To explore strange new worlds,\n" +
                 "To seek out new life and new civilizations";
@@ -22,23 +19,20 @@ public class GraphTest {
         }
     }
 
-    @Test
     public void generateNewText() throws Exception {
-        String text = "To explore strange new worlds,\n" +
-                "To seek out new life and new civilizations";
+        String text = "To explore strange new worlds,\n"
+                + "To seek out new life and new civilizations";
         Input2Graph t = new Input2Graph(text);
         Graph g = t.translate(text);
-        System.out.println(g.generateNewText("Seek to explore new and " +
-                "exciting synergies"));
+        System.out.println(g.generateNewText("Seek to explore new and "
+                + "exciting synergies"));
     }
 
-    @Test
     public void addWord() throws Exception {
         Graph g = new Graph();
         g.addWord("abc");
     }
 
-    @Test
     public void addWords() throws Exception {
         String[] testInput = {};
         Graph g = new Graph();
@@ -49,14 +43,12 @@ public class GraphTest {
         g.addWords(testInput);
     }
 
-    @Test
     public void writeGraphFile() throws Exception {
         Graph g = new Graph();
         String[] inputWord = {"a"};
         g.addWords(inputWord);
     }
 
-    @Test
     public void findBridgeWords() throws Exception {
         Graph g = new Graph();
         String[] inputWord = {"a", "b", "c", "a", "c", "c"};
@@ -64,7 +56,6 @@ public class GraphTest {
         System.out.println(g.findBridgeWords("a", "c"));
     }
 
-    @Test
     public void testFindShortestPath() throws Exception {
         Graph g = new Graph();
 
@@ -115,7 +106,6 @@ public class GraphTest {
         */
         System.out.println(g.queryBridgeWords("s","v4"));
     }
-    @Test
     public void ttt() throws Exception{
         File[] files = new File(".").listFiles();
         List<File> fs = Arrays.asList(files);

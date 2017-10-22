@@ -1,5 +1,3 @@
-import org.jetbrains.annotations.NotNull;
-
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.nio.charset.Charset;
@@ -364,7 +362,6 @@ public class Graph {
      * @param tarName word2
      * @return 两点之间的桥接词
      */
-    @NotNull
     public List<String> findBridgeWords(String srcName, String tarName) {
         Node srcNode = this.name2node.get(srcName);
         Node tarNode = this.name2node.get(tarName);
@@ -383,7 +380,6 @@ public class Graph {
      * @param srcName 源点
      * @return Map类型的最短路径
      */
-    @NotNull
     public HashMap<String, String> findShortestPaths(String srcName) {
         if (!name2node.containsKey(srcName)) {
             return new HashMap<>();
@@ -425,7 +421,6 @@ public class Graph {
      * @param tarName 终点
      * @return 最短路径列表
      */
-    @NotNull
     public List<String> findShortestPaths(String srcName, String tarName) {
         if (!name2node.containsKey(srcName) || !name2node.containsKey(tarName)) {
             return new ArrayList<>();
@@ -469,7 +464,6 @@ public class Graph {
      *
      * @return 随机游走diedaiqi
      */
-    @NotNull
     public Iterator<String> randomWalkIterator() {
         return new WalkIterator();
     }
@@ -483,7 +477,8 @@ public class Graph {
     public void generateImage(String dotPath, String picPath) {
         try {
             //set path = "./Graphviz/bin/"
-            String command = "cmd /c dot -Tpng " + dotPath + " -o " + picPath;
+            // 降低图片画质，减少内存占用
+            String command = "cmd /c dot -Tpng -Gdpi=63 " + dotPath + " -o " + picPath;
             String[] env = new String[]{"PATH=" + Paths.get(".").toAbsolutePath().normalize().toString() + "\\Graphviz\\bin"};
             Process p = Runtime.getRuntime().exec(command, env);
             p.waitFor();
