@@ -1,8 +1,7 @@
-import javafx.scene.image.Image;
-
 import java.util.HashSet;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
+import javafx.scene.image.Image;
 
 public class ImageProperty {
     public static Boolean pre = false;

@@ -4,6 +4,7 @@ public class ImageLoader extends Thread {
         this.path = path;
     }
     String path;
+
     @Override
     public void run() {
         ImageProperty.cntLock.lock();

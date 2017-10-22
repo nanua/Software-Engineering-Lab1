@@ -8,12 +8,11 @@ import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.FileChooser;
-import sun.applet.Main;
-
 import javax.swing.filechooser.FileSystemView;
 import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
+import sun.applet.Main;
 
 public class OpenFile implements Initializable{
     @FXML
