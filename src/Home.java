@@ -109,8 +109,7 @@ public class Home implements Initializable {
                 ImageLoader loader = new ImageLoader(pathString);
                 loader.start();
                 try {
-                    // 把等待间隔减小
-                    sleep(1000);
+                    sleep(5000);
                 } catch (Exception e) {
                 }
                 if (ImageProperty.isAborted || !ImageProperty.loadedImages.contains(GUID)){
