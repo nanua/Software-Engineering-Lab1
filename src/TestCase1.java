@@ -2,22 +2,17 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 
-public class TestGraph {
+public class TestCase1 {
     @Test
     public void testQueryBridgeWords(){
-
+        String[] words = new String[]{
+          "no",
+          "bridge",
+          "words",
+          "test"
+        };
+        Graph g = new Graph(words);
+        String res = g.queryBridgeWords("bridge","words");
+        assertEquals("No bridge words from \"bridge\" to \"words\" !", res);
     }
-    @Test
-    public void testQueryBridgeWords2(){
-
-    }
-    @Test
-    public void testQueryBridgeWords3(){
-
-    }
-    @Test
-    public void testQueryBridgeWords4(){
-
-    }
-
 }

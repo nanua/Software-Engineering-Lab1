@@ -530,12 +530,12 @@ public class Graph {
         }
         String res;
         if (result.size() == 1) {
-            res = "The bridge words from \"" + word1 + "\" to \"" + word2 + "\" is: " + result.get(0);
+            res = "The bridge word from \"" + word1 + "\" to \"" + word2 + "\" is: " + result.get(0);
         } else {
             res = "The bridge words from \"" + word1 + "\" to \"" + word2 + "\" are: ";
             res += String.join(", ", result);
             int lastWordIndex = res.lastIndexOf(", ");
-            res = res.substring(0, lastWordIndex + 1) + "and " + res.substring(lastWordIndex + 2);
+            res = res.substring(0, lastWordIndex) + " and " + res.substring(lastWordIndex + 2);
         }
         return res;
     }
