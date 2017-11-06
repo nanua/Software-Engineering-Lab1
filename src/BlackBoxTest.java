@@ -39,7 +39,7 @@ public class BlackBoxTest {
         String word1 = "important";
         String word2 = "trends";
         String result = labOneTestGraph.queryBridgeWords(word1, word2);
-        assertEquals("The bridge words from \"important\" to \"trends\" is: development", result);
+        assertEquals("The bridge word from \"important\" to \"trends\" is: development", result);
     }
 
 
@@ -57,7 +57,7 @@ public class BlackBoxTest {
         String word1 = "the";
         String word2 = "of";
         String result = labOneTestGraph.queryBridgeWords(word1, word2);
-        assertEquals("The bridge words from \"the\" to \"of\" are: study, meaning,and format", result);
+        assertEquals("The bridge words from \"the\" to \"of\" are: study, meaning and format", result);
     }
 
 
@@ -97,7 +97,7 @@ public class BlackBoxTest {
         String word1 = "the";
         String word2 = "the";
         String result = graph.queryBridgeWords(word1, word2);
-        assertEquals("The bridge words from \"the\" to \"the\" is: the", result);
+        assertEquals("The bridge word from \"the\" to \"the\" is: the", result);
     }
 
 
@@ -228,7 +228,7 @@ public class BlackBoxTest {
         String word1 = "is";
         String word2 = "is";
         String result = graph.queryBridgeWords(word1, word2);
-        assertEquals("The bridge words from \"is\" to \"is\" is: is", result);
+        assertEquals("The bridge word from \"is\" to \"is\" is: is", result);
     }
 
 }
