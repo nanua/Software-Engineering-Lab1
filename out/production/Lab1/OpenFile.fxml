@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            stylesheets="Home.css"
+            fx:controller="OpenFile" fx:id="openFilePane">
+
+    <Label text="打开文件"
+           AnchorPane.topAnchor="40"
+           AnchorPane.leftAnchor="40"
+           styleClass="chinese,normal" id="open-file-title"
+           onMouseClicked="#chooseFile"/>
+
+    <TextField AnchorPane.topAnchor="100"
+               AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="40"
+               editable="false"
+               fx:id="filePathTextField"/>
+
+    <Label text="浏 览"
+           AnchorPane.topAnchor="160"
+           AnchorPane.rightAnchor="20"
+           styleClass="pressable" id="browse"
+           onMouseClicked="#chooseFile"/>
+
+    <TextArea AnchorPane.topAnchor="240" AnchorPane.bottomAnchor="40"
+              AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="40"
+              editable="false" wrapText="true"
+              fx:id="dealtTextArea"/>
+
+</AnchorPane>
