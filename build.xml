@@ -4,9 +4,9 @@
   
   <property file="build.properties"/>
   <!-- Uncomment the following property if no tests compilation is needed -->
-
+  <!-- 
   <property name="skip.tests" value="true"/>
-
+   -->
   
   <!-- Compiler options -->
   
@@ -205,4 +205,11 @@
   <target name="build.modules" depends="init, clean, compile.module.lab1" description="build all modules"/>
   
   <target name="all" depends="build.modules" description="build all"/>
+  
+  <target name="test" depends="init, clean, compile.module.lab1">
+    <junit printsummary="true">
+      <classpath refid="lab1.module.production.classpath"/>
+      <test name="BlackBoxTest"/>
+    </junit>
+  </target>
 </project>
