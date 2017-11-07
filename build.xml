@@ -206,7 +206,7 @@
   
   <target name="all" depends="build.modules" description="build all"/>
   
-  <target name="test" depends="init, clean, compile.module.lab1">
+  <target name="test">
     <junit printsummary="true">
       <classpath refid="lab1.module.production.classpath"/>
       <test name="BlackBoxTest"/>
