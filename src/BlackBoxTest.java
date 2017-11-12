@@ -13,7 +13,6 @@ public class BlackBoxTest {
                 "By the study of the RESEP approach, the meaning of this word.";
         Input2Graph input2Graph = new Input2Graph();
         this.labOneTestGraph = input2Graph.translate(labOneTestString);
-
     }
 
     @Test
@@ -223,7 +222,6 @@ public class BlackBoxTest {
     @Test
     public void queryBridgeWords23() throws Exception {
         Input2Graph input2Graph = new Input2Graph();
-
         Graph graph = input2Graph.translate("is is");
         String word1 = "is";
         String word2 = "is";
