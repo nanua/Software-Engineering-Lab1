@@ -30,7 +30,7 @@ public class MainGui extends Application {
         FXMLLoader.load(getClass().getResource("ShowImage.fxml"));
         FXMLLoader.load(getClass().getResource("ShowBridgeWords.fxml"));
         FXMLLoader.load(getClass().getResource("ShowShortestPaths.fxml"));
-        primaryStage.setTitle("软设实验一");
+        primaryStage.setTitle("软设实验七");
         primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("main.ico")));
         Home.homeController.contentPane.setCenter
                 (OpenFile.openFileController.openFilePane);
